@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Philippines | Philippines NCL</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html"><img src="img/download (2).png" alt="Philippines NCL" class="logo-img"></a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li><a href="explore.html" class="nav-link active">EXPLORE</a></li>
+                        <li><a href="deals.html" class="nav-link">CRUISE DEALS</a></li>
+                        <li><a href="about.html" class="nav-link">WHY PHILIPPINES NCL</a></li>
+                        <li><a href="manage.html" class="nav-link">MANAGE</a></li>
+                        <li><a href="help.html" class="nav-link">HELP</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="search-btn">🔍</button>
+                    <button class="wishlist-btn">♡</button>
+                    <button class="register-btn">REGISTER</button>
+                    <button class="login-btn">LOG IN</button>
+                    <div class="phone">📞 +63 2 8123 4567</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">EXPLORE PHILIPPINES</h1>
+            <p class="hero-subtitle">Discover Amazing Cruise Destinations</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a> > <span>Explore</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h2>🗺️ Interactive Destination Map</h2>
+            <div class="map-container">
+                <div class="philippines-map">
+                    <div class="map-region north" onclick="showRegion('north')">
+                        <h3>Northern Luzon</h3>
+                        <p>Vigan • Baguio • Ilocos</p>
+                    </div>
+                    <div class="map-region central" onclick="showRegion('central')">
+                        <h3>Central Philippines</h3>
+                        <p>Manila • Boracay • Bohol</p>
+                    </div>
+                    <div class="map-region south" onclick="showRegion('south')">
+                        <h3>Southern Islands</h3>
+                        <p>Palawan • Cebu • Davao</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destination-explorer">
+                <h2>🏝️ Explore by Island</h2>
+                <div class="island-tabs">
+                    <button class="island-tab active" onclick="showIsland('luzon')">Luzon</button>
+                    <button class="island-tab" onclick="showIsland('visayas')">Visayas</button>
+                    <button class="island-tab" onclick="showIsland('mindanao')">Mindanao</button>
+                </div>
+
+                <div id="luzon" class="island-content active">
+                    <h3>Luzon - The Main Island</h3>
+                    <div class="destinations-showcase">
+                        <div class="destination-large">
+                            <img src="img/manila-bay.jpg" alt="Manila">
+                            <div class="destination-overlay">
+                                <h4>Manila</h4>
+                                <p>Historic capital with Spanish colonial architecture</p>
+                                <div class="destination-features">
+                                    <span>🏛️ Intramuros</span>
+                                    <span>🌅 Manila Bay</span>
+                                    <span>🏪 Shopping</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="visayas" class="island-content">
+                    <h3>Visayas - The Heart of the Philippines</h3>
+                    <div class="destinations-showcase">
+                        <div class="destination-large">
+                            <img src="img/received-2389196027962541.jpg" alt="Boracay">
+                            <div class="destination-overlay">
+                                <h4>Boracay</h4>
+                                <p>World's best beach with powdery white sand</p>
+                                <div class="destination-features">
+                                    <span>🏖️ White Beach</span>
+                                    <span>🏄‍♀️ Water Sports</span>
+                                    <span>🌙 Nightlife</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="mindanao" class="island-content">
+                    <h3>Mindanao - The Southern Frontier</h3>
+                    <div class="destinations-showcase">
+                        <div class="destination-large">
+                            <img src="img/white-island-with-mt.jpg" alt="Camiguin">
+                            <div class="destination-overlay">
+                                <h4>Camiguin Island</h4>
+                                <p>Last frontier with pristine nature</p>
+                                <div class="destination-features">
+                                    <span>🏞️ Camiguin</span>
+                                    <span>🚣‍♀️ Underground River</span>
+                                    <span>🐠 Marine Life</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cruise-finder">
+                <h2>🔍 Find Your Perfect Cruise</h2>
+                <div class="finder-form">
+                    <div class="form-row">
+                        <select id="duration">
+                            <option value="">Select Duration</option>
+                            <option value="3">3-4 Days</option>
+                            <option value="5">5-7 Days</option>
+                            <option value="10">10+ Days</option>
+                        </select>
+                        <select id="budget">
+                            <option value="">Select Budget</option>
+                            <option value="budget">₱30,000 - ₱60,000</option>
+                            <option value="mid">₱60,000 - ₱100,000</option>
+                            <option value="luxury">₱100,000+</option>
+                        </select>
+                        <button class="btn-primary" onclick="findCruises()">Find Cruises</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Philippines NCL. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

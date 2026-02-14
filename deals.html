@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruise Deals | Philippines NCL</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html"><img src="img/download (2).png" alt="Philippines NCL" class="logo-img"></a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li><a href="explore.html" class="nav-link">EXPLORE</a></li>
+                        <li><a href="deals.html" class="nav-link active">CRUISE DEALS</a></li>
+                        <li><a href="about.html" class="nav-link">WHY PHILIPPINES NCL</a></li>
+                        <li><a href="manage.html" class="nav-link">MANAGE</a></li>
+                        <li><a href="help.html" class="nav-link">HELP</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="search-btn">🔍</button>
+                    <button class="wishlist-btn">♡</button>
+                    <button class="register-btn">REGISTER</button>
+                    <button class="login-btn">LOG IN</button>
+                    <div class="phone">📞 +63 2 8123 4567</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">CRUISE DEALS</h1>
+            <p class="hero-subtitle">Amazing Offers for Philippines Cruises</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/">Home</a> > <span>Cruise Deals</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h2>🎉 Current Philippines NCL Deals</h2>
+            
+            <div class="deals-calculator">
+                <h2>💰 Live Pricing Calculator</h2>
+                <div class="calculator-form">
+                    <div class="calc-row">
+                        <div class="calc-group">
+                            <label>Cruise Package</label>
+                            <select id="cruise-package" onchange="updatePrice()">
+                                <option value="59900">5-Day Highlights - ₱59,900</option>
+                                <option value="89900">7-Day Island Hopping - ₱89,900</option>
+                                <option value="129900">10-Day Southeast Asia - ₱129,900</option>
+                            </select>
+                        </div>
+                        <div class="calc-group">
+                            <label>Cabin Type</label>
+                            <select id="cabin-type" onchange="updatePrice()">
+                                <option value="1.0">Interior Cabin</option>
+                                <option value="1.3">Oceanview (+30%)</option>
+                                <option value="1.6">Balcony (+60%)</option>
+                                <option value="2.2">Suite (+120%)</option>
+                            </select>
+                        </div>
+                        <div class="calc-group">
+                            <label>Passengers</label>
+                            <input type="number" id="passengers" value="2" min="1" max="8" onchange="updatePrice()">
+                        </div>
+                    </div>
+                    <div class="price-display">
+                        <div class="total-price">
+                            <span>Total Price: </span>
+                            <span id="total-price">₱119,800</span>
+                        </div>
+                        <div class="per-person">
+                            <span id="per-person">₱59,900 per person</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flash-deals">
+                <h2>⚡ Flash Deals - Limited Time!</h2>
+                <div class="flash-timer">
+                    <div class="timer-display">
+                        <div class="timer-unit">
+                            <span id="hours">23</span>
+                            <label>Hours</label>
+                        </div>
+                        <div class="timer-unit">
+                            <span id="minutes">45</span>
+                            <label>Minutes</label>
+                        </div>
+                        <div class="timer-unit">
+                            <span id="seconds">30</span>
+                            <label>Seconds</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flash-deals-grid">
+                    <div class="flash-deal">
+                        <div class="flash-badge">FLASH SALE</div>
+                        <h3>Weekend Getaway</h3>
+                        <div class="price-comparison">
+                            <span class="old-price">₱89,900</span>
+                            <span class="new-price">₱59,900</span>
+                        </div>
+                        <p>3-Day Manila to Boracay Express</p>
+                        <div class="availability">Only 12 cabins left!</div>
+                        <button class="btn-flash">Grab Deal</button>
+                    </div>
+                    
+                    <div class="flash-deal">
+                        <div class="flash-badge">LAST CALL</div>
+                        <h3>Luxury Suite Special</h3>
+                        <div class="price-comparison">
+                            <span class="old-price">₱299,900</span>
+                            <span class="new-price">₱199,900</span>
+                        </div>
+                        <p>7-Day Suite Experience with Butler Service</p>
+                        <div class="availability">Only 3 suites left!</div>
+                        <button class="btn-flash">Book Suite</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seasonal-offers">
+                <h2>🌺 Seasonal Promotions</h2>
+                <div class="seasons-grid">
+                    <div class="season-card summer">
+                        <h3>Summer Paradise</h3>
+                        <div class="season-dates">March - May 2024</div>
+                        <div class="season-discount">25% OFF</div>
+                        <p>Perfect weather for island hopping and water activities</p>
+                        <ul>
+                            <li>Free snorkeling gear</li>
+                            <li>Complimentary beach excursions</li>
+                            <li>Sunset cocktail party</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="season-card holiday">
+                        <h3>Holiday Magic</h3>
+                        <div class="season-dates">December 2024</div>
+                        <div class="season-discount">New Year Special</div>
+                        <p>Celebrate New Year at sea with fireworks over Manila Bay</p>
+                        <ul>
+                            <li>New Year's Eve gala dinner</li>
+                            <li>Champagne toast at midnight</li>
+                            <li>Special holiday entertainment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-incentives">
+                <h2>🎁 Book Now & Get More</h2>
+                <div class="incentives-grid">
+                    <div class="incentive-item">
+                        <div class="incentive-icon">📱</div>
+                        <h4>Free Wi-Fi Package</h4>
+                        <p>Stay connected throughout your cruise</p>
+                    </div>
+                    <div class="incentive-item">
+                        <div class="incentive-icon">🍷</div>
+                        <h4>Welcome Drinks</h4>
+                        <p>Complimentary cocktails on embarkation day</p>
+                    </div>
+                    <div class="incentive-item">
+                        <div class="incentive-icon">🎭</div>
+                        <h4>Priority Show Seating</h4>
+                        <p>Best seats for all entertainment shows</p>
+                    </div>
+                    <div class="incentive-item">
+                        <div class="incentive-icon">🏨</div>
+                        <h4>Hotel Credit</h4>
+                        <p>₱5,000 credit for pre/post cruise hotels</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-section">
+                <h3>Ready to Book?</h3>
+                <p>Contact our cruise specialists to find the best deal for your Philippines adventure!</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>📞 Phone:</strong> +63 2 8123 4567
+                    </div>
+                    <div class="contact-item">
+                        <strong>📧 Email:</strong> deals@philippines-ncl.com
+                    </div>
+                    <div class="contact-item">
+                        <strong>🕒 Hours:</strong> Monday-Sunday, 8AM-8PM
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Philippines NCL. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

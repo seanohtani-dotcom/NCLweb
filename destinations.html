@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruise Destinations | Philippines NCL</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+          crossorigin=""/>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
+            crossorigin=""></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="assets/images/logo-philippines-ncl.png" alt="Philippines NCL" class="logo-img">
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li><a href="/explore" class="nav-link">EXPLORE</a></li>
+                        <li><a href="/deals" class="nav-link">CRUISE DEALS</a></li>
+                        <li><a href="/about" class="nav-link">WHY PHILIPPINES NCL</a></li>
+                        <li><a href="/manage" class="nav-link">MANAGE</a></li>
+                        <li><a href="/help" class="nav-link">HELP</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="search-btn">🔍</button>
+                    <button class="wishlist-btn">♡</button>
+                    <button class="register-btn">REGISTER</button>
+                    <button class="login-btn">LOG IN</button>
+                    <div class="phone">📞 +63 2 8123 4567</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">CRUISE DESTINATIONS</h1>
+            <p class="hero-subtitle">Explore the Beautiful Philippines</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/">Home</a> > <span>Cruise Destinations</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h2>🗺️ Interactive Destination Map</h2>
+            <p style="margin-bottom: 1.5rem; color: #666;">Click on any destination marker to explore cruise ports across the Philippines</p>
+            
+            <!-- Interactive Map Container -->
+            <div id="map-container" style="height: 600px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.2); margin-bottom: 2rem;"></div>
+            
+            <!-- Info Panel (Hidden by default) -->
+            <div id="info-panel" class="info-panel">
+                <button id="close-panel" class="close-panel-btn">&times;</button>
+                <div id="info-content"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Philippines NCL. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="map-destinations.js"></script>
+</body>
+</html>
